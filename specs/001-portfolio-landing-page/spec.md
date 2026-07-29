@@ -209,11 +209,11 @@ correctly on initial setup.
   running all required services (application and database).
 - **FR-012**: System MUST handle missing or incomplete data gracefully
   with appropriate fallbacks (placeholder images, omitted fields).
-- **FR-013**: System MUST use static site generation (SSG) for optimal
+- **FR-013**: System MUST pre-render pages at build time for optimal
   performance and SEO, with appropriate meta tags and Open Graph data
   for social sharing.
-- **FR-014**: System MUST use Next.js Image component for automatic
-  image optimization and responsive sizing across all devices.
+- **FR-014**: System MUST provide automatic image optimization and
+  responsive sizing across all devices.
 
 ### Key Entities *(include if feature involves data)*
 
