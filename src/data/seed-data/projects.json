@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Project Alpha",
+    "description": "A full-stack web application built with React and Node.js that provides real-time collaboration features for remote teams. Includes WebSocket integration, user authentication, and file sharing capabilities.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    "techStack": ["React", "TypeScript", "Node.js", "PostgreSQL", "WebSocket"],
+    "demoUrl": "https://alpha.example.com",
+    "repositoryUrl": "https://github.com/johndoe/project-alpha",
+    "displayOrder": 1,
+    "isFeatured": true
+  },
+  {
+    "title": "DevTools CLI",
+    "description": "An open-source command-line toolkit that automates common development workflows including code generation, testing, and deployment. Used by over 500 developers in production environments.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=600&fit=crop",
+    "techStack": ["TypeScript", "Node.js", "Commander.js"],
+    "demoUrl": null,
+    "repositoryUrl": "https://github.com/johndoe/devtools-cli",
+    "displayOrder": 2,
+    "isFeatured": true
+  },
+  {
+    "title": "E-Commerce Platform",
+    "description": "A scalable e-commerce platform with microservices architecture, handling thousands of transactions daily. Features include inventory management, payment processing, and order tracking.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    "techStack": ["Next.js", "TypeScript", "Prisma", "Stripe", "Docker"],
+    "demoUrl": "https://shop.example.com",
+    "repositoryUrl": "https://github.com/johndoe/ecommerce",
+    "displayOrder": 3,
+    "isFeatured": true
+  },
+  {
+    "title": "Weather Dashboard",
+    "description": "A responsive weather dashboard that displays real-time weather data with interactive charts and maps. Integrates with multiple weather APIs for accurate forecasting.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+    "techStack": ["React", "TypeScript", "D3.js", "OpenWeather API"],
+    "demoUrl": "https://weather.example.com",
+    "repositoryUrl": null,
+    "displayOrder": 4,
+    "isFeatured": false
+  },
+  {
+    "title": "Task Management App",
+    "description": "A Kanban-style task management application with drag-and-drop functionality, team collaboration features, and progress tracking analytics.",
+    "thumbnailUrl": null,
+    "techStack": ["React", "TypeScript", "Redux", "Firebase"],
+    "demoUrl": "https://tasks.example.com",
+    "repositoryUrl": "https://github.com/johndoe/task-manager",
+    "displayOrder": 5,
+    "isFeatured": false
+  },
+  {
+    "title": "Portfolio Generator",
+    "description": "A static site generator specifically designed for developer portfolios. Supports multiple themes, markdown content, and automatic deployment to various hosting platforms.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+    "techStack": ["Next.js", "TypeScript", "MDX", "Tailwind CSS"],
+    "demoUrl": null,
+    "repositoryUrl": "https://github.com/johndoe/portfolio-gen",
+    "displayOrder": 6,
+    "isFeatured": false
+  }
+]

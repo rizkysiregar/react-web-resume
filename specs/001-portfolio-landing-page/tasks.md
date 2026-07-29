@@ -86,20 +86,20 @@
 
 ### Tests for User Story 2
 
-- [ ] T021 [P] [US2] Create ProjectCard component tests in `src/components/shared/ProjectCard.test.tsx`
-- [ ] T022 [P] [US2] Create ProjectsSection component tests in `src/components/sections/ProjectsSection.test.tsx`
+- [x] T021 [P] [US2] Create ProjectCard component tests in `src/components/shared/ProjectCard.test.tsx`
+- [x] T022 [P] [US2] Create ProjectsSection component tests in `src/components/sections/ProjectsSection.test.tsx`
 
 ### Implementation for User Story 2
 
-- [ ] T023 [US2] Implement PrismaProjectRepository in `src/data/repositories/PrismaProjectRepository.ts`
-- [ ] T024 [P] [US2] Create projects seed data file in `src/data/seed-data/projects.json`
-- [ ] T025 [US2] Create data layer barrel export in `src/data/repositories/index.ts`
-- [ ] T026 [US2] Implement ProjectCard component with Next.js Image in `src/components/shared/ProjectCard.tsx`
-- [ ] T027 [US2] Create shared components barrel export in `src/components/shared/index.ts`
-- [ ] T028 [US2] Implement ProjectsSection with responsive grid layout in `src/components/sections/ProjectsSection.tsx`
-- [ ] T029 [US2] Integrate ProjectsSection with landing page data fetching in `src/app/page.tsx`
-- [ ] T030 [US2] Implement database seed script in `src/data/prisma/seed.ts`
-- [ ] T031 [US2] Add seed script configuration to `package.json`
+- [x] T023 [US2] Implement PrismaProjectRepository in `src/data/repositories/PrismaProjectRepository.ts`
+- [x] T024 [P] [US2] Create projects seed data file in `src/data/seed-data/projects.json`
+- [x] T025 [US2] Create data layer barrel export in `src/data/repositories/index.ts`
+- [x] T026 [US2] Implement ProjectCard component with Next.js Image in `src/components/shared/ProjectCard.tsx`
+- [x] T027 [US2] Create shared components barrel export in `src/components/shared/index.ts`
+- [x] T028 [US2] Implement ProjectsSection with responsive grid layout in `src/components/sections/ProjectsSection.tsx`
+- [x] T029 [US2] Integrate ProjectsSection with landing page data fetching in `src/app/page.tsx`
+- [x] T030 [US2] Implement database seed script in `src/data/prisma/seed.ts`
+- [x] T031 [US2] Add seed script configuration to `package.json`
 
 **Checkpoint**: Projects section displays cards with real database data, responsive grid, external links work
 
@@ -113,14 +113,14 @@
 
 ### Tests for User Story 3
 
-- [ ] T032 [P] [US3] Create Navigation component tests in `src/components/shared/Navigation.test.tsx`
+- [x] T032 [P] [US3] Create Navigation component tests in `src/components/shared/Navigation.test.tsx`
 
 ### Implementation for User Story 3
 
-- [ ] T033 [US3] Implement Navigation component with section links in `src/components/shared/Navigation.tsx`
-- [ ] T034 [US3] Implement mobile hamburger menu in `src/components/shared/Navigation.tsx`
-- [ ] T035 [US3] Add smooth scroll CSS behavior in `src/app/globals.css`
-- [ ] T036 [US3] Integrate Navigation into root layout in `src/app/layout.tsx`
+- [x] T033 [US3] Implement Navigation component with section links in `src/components/shared/Navigation.tsx`
+- [x] T034 [US3] Implement mobile hamburger menu in `src/components/shared/Navigation.tsx`
+- [x] T035 [US3] Add smooth scroll CSS behavior in `src/app/globals.css`
+- [x] T036 [US3] Integrate Navigation into root layout in `src/app/layout.tsx`
 
 **Checkpoint**: Navigation links scroll to sections, mobile menu works, keyboard navigable
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { HeroSection } from '@/components/sections';
-import { PrismaProfileRepository } from '@/data/repositories/PrismaProfileRepository';
+import { HeroSection, ProjectsSection } from '@/components/sections';
+import { PrismaProfileRepository, PrismaProjectRepository } from '@/data/repositories';
 
 export async function generateMetadata(): Promise<Metadata> {
   const profileRepository = new PrismaProfileRepository();
@@ -28,7 +28,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const profileRepository = new PrismaProfileRepository();
+  const projectRepository = new PrismaProjectRepository();
   const profile = await profileRepository.getProfile();
+  const projects = await projectRepository.getAllProjects();
 
   return (
     <main className="flex-1">
@@ -46,11 +48,7 @@ export default async function Home() {
           </div>
         </section>
       )}
-      <section id="projects" className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-foreground/60">Projects section placeholder</p>
-        </div>
-      </section>
+      <ProjectsSection projects={projects} />
       <section id="contact" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-foreground/60">Contact section placeholder</p>

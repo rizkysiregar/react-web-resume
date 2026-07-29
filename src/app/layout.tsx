@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Navigation } from '@/components/shared';
 import './globals.css';
+
+const navigationSections = [
+  { id: 'profile', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
+];
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -43,6 +50,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <Navigation sections={navigationSections} />
         {children}
       </body>
     </html>
