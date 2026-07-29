@@ -1,0 +1,11 @@
+{
+  "name": "John Doe",
+  "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+  "motto": "Building things that matter",
+  "description": "Full-stack developer passionate about creating elegant solutions to complex problems. With over 5 years of experience in web development, I specialize in building scalable applications using modern technologies like React, TypeScript, and Node.js.",
+  "socialLinks": [
+    { "label": "GitHub", "url": "https://github.com/johndoe" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/johndoe" },
+    { "label": "Twitter", "url": "https://twitter.com/johndoe" }
+  ]
+}

@@ -26,12 +26,12 @@
 
 **Purpose**: Project initialization, tooling, and basic structure
 
-- [ ] T001 Initialize Next.js 14+ project with App Router and TypeScript strict mode in `package.json`, `tsconfig.json`, `next.config.js`
-- [ ] T002 [P] Configure Tailwind CSS with dark mode as default in `tailwind.config.ts`, `src/app/globals.css`
-- [ ] T003 [P] Configure ESLint and Prettier in `.eslintrc.json`, `.prettierrc`
-- [ ] T004 [P] Create environment configuration with `.env.example`
-- [ ] T005 Create Prisma schema with Profile and Project models in `src/data/prisma/schema.prisma`
-- [ ] T006 Create Docker Compose configuration with PostgreSQL and app services in `docker-compose.yml`, `Dockerfile`
+- [x] T001 Initialize Next.js 14+ project with App Router and TypeScript strict mode in `package.json`, `tsconfig.json`, `next.config.js`
+- [x] T002 [P] Configure Tailwind CSS with dark mode as default in `tailwind.config.ts`, `src/app/globals.css`
+- [x] T003 [P] Configure ESLint and Prettier in `.eslintrc.json`, `.prettierrc`
+- [x] T004 [P] Create environment configuration with `.env.example`
+- [x] T005 Create Prisma schema with Profile and Project models in `src/data/prisma/schema.prisma`
+- [x] T006 Create Docker Compose configuration with PostgreSQL and app services in `docker-compose.yml`, `Dockerfile`
 
 ---
 
@@ -41,13 +41,13 @@
 
 **CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T007 [P] Create domain entities for Profile and Project in `src/domain/entities/Profile.ts`, `src/domain/entities/Project.ts`, `src/domain/entities/index.ts`
-- [ ] T008 [P] Create Zod validation schemas for Profile and Project in `src/types/schemas.ts`
-- [ ] T009 [P] Create shared TypeScript types and barrel exports in `src/types/index.ts`
-- [ ] T010 [P] Create repository interfaces in `src/domain/repositories/ProfileRepository.ts`, `src/domain/repositories/ProjectRepository.ts`, `src/domain/repositories/index.ts`
-- [ ] T011 Create Prisma client singleton in `src/lib/prisma.ts`
-- [ ] T012 Create root layout with dark mode theme and base HTML structure in `src/app/layout.tsx`
-- [ ] T013 Create minimal landing page shell (empty sections placeholder) in `src/app/page.tsx`
+- [x] T007 [P] Create domain entities for Profile and Project in `src/domain/entities/Profile.ts`, `src/domain/entities/Project.ts`, `src/domain/entities/index.ts`
+- [x] T008 [P] Create Zod validation schemas for Profile and Project in `src/types/schemas.ts`
+- [x] T009 [P] Create shared TypeScript types and barrel exports in `src/types/index.ts`
+- [x] T010 [P] Create repository interfaces in `src/domain/repositories/ProfileRepository.ts`, `src/domain/repositories/ProjectRepository.ts`, `src/domain/repositories/index.ts`
+- [x] T011 Create Prisma client singleton in `src/lib/prisma.ts`
+- [x] T012 Create root layout with dark mode theme and base HTML structure in `src/app/layout.tsx`
+- [x] T013 Create minimal landing page shell (empty sections placeholder) in `src/app/page.tsx`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -63,16 +63,16 @@
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T014 [P] [US1] Create HeroSection component tests in `src/components/sections/HeroSection.test.tsx`
+- [x] T014 [P] [US1] Create HeroSection component tests in `src/components/sections/HeroSection.test.tsx`
 
 ### Implementation for User Story 1
 
-- [ ] T015 [US1] Implement PrismaProfileRepository in `src/data/repositories/PrismaProfileRepository.ts`
-- [ ] T016 [P] [US1] Create profile seed data file in `src/data/seed-data/profile.json`
-- [ ] T017 [US1] Implement HeroSection component with Next.js Image in `src/components/sections/HeroSection.tsx`
-- [ ] T018 [US1] Create sections barrel export in `src/components/sections/index.ts`
-- [ ] T019 [US1] Integrate HeroSection with landing page data fetching in `src/app/page.tsx`
-- [ ] T020 [US1] Add SEO meta tags and Open Graph data for profile in `src/app/layout.tsx`, `src/app/page.tsx`
+- [x] T015 [US1] Implement PrismaProfileRepository in `src/data/repositories/PrismaProfileRepository.ts`
+- [x] T016 [P] [US1] Create profile seed data file in `src/data/seed-data/profile.json`
+- [x] T017 [US1] Implement HeroSection component with Next.js Image in `src/components/sections/HeroSection.tsx`
+- [x] T018 [US1] Create sections barrel export in `src/components/sections/index.ts`
+- [x] T019 [US1] Integrate HeroSection with landing page data fetching in `src/app/page.tsx`
+- [x] T020 [US1] Add SEO meta tags and Open Graph data for profile in `src/app/layout.tsx`, `src/app/page.tsx`
 
 **Checkpoint**: Profile section displays with real database data, responsive, dark mode styled
 
