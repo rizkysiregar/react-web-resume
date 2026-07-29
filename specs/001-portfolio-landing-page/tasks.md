@@ -134,12 +134,12 @@
 
 ### Tests for User Story 4
 
-- [ ] T037 [P] [US4] Create ContactSection component tests in `src/components/sections/ContactSection.test.tsx`
+- [x] T037 [P] [US4] Create ContactSection component tests in `src/components/sections/ContactSection.test.tsx`
 
 ### Implementation for User Story 4
 
-- [ ] T038 [US4] Implement ContactSection component with social links in `src/components/sections/ContactSection.tsx`
-- [ ] T039 [US4] Integrate ContactSection with landing page data fetching in `src/app/page.tsx`
+- [x] T038 [US4] Implement ContactSection component with social links in `src/components/sections/ContactSection.tsx`
+- [x] T039 [US4] Integrate ContactSection with landing page data fetching in `src/app/page.tsx`
 
 **Checkpoint**: Contact section displays social links, links open in new tab, accessible labels
 
@@ -153,14 +153,14 @@
 
 ### Tests for User Story 5
 
-- [ ] T040 [P] [US5] Create integration tests for PrismaProfileRepository in `tests/integration/profile-repository.test.ts`
-- [ ] T041 [P] [US5] Create integration tests for PrismaProjectRepository in `tests/integration/project-repository.test.ts`
+- [x] T040 [P] [US5] Create integration tests for PrismaProfileRepository in `tests/integration/profile-repository.test.ts`
+- [x] T041 [P] [US5] Create integration tests for PrismaProjectRepository in `tests/integration/project-repository.test.ts`
 
 ### Implementation for User Story 5
 
-- [ ] T042 [US5] Create initial Prisma migration in `src/data/prisma/migrations/`
-- [ ] T043 [US5] Verify seed data populates at least 1 profile and 3 projects via `src/data/prisma/seed.ts`
-- [ ] T044 [US5] Configure Docker Compose to auto-connect app to PostgreSQL in `docker-compose.yml`
+- [x] T042 [US5] Create initial Prisma migration in `src/data/prisma/migrations/`
+- [x] T043 [US5] Verify seed data populates at least 1 profile and 3 projects via `src/data/prisma/seed.ts`
+- [x] T044 [US5] Configure Docker Compose to auto-connect app to PostgreSQL in `docker-compose.yml`
 
 **Checkpoint**: `docker-compose up` starts full stack, seed script populates data, page shows DB content
 
@@ -170,15 +170,15 @@
 
 **Purpose**: Accessibility, responsiveness, error handling, and final validation
 
-- [ ] T045 [P] Add WCAG AA accessibility attributes (ARIA labels, roles, keyboard nav) across all components
-- [ ] T046 [P] Verify responsive layout at 320px, 768px, and 1024px+ breakpoints across all sections
-- [ ] T047 [P] Verify dark mode contrast ratio (4.5:1) for all text elements
-- [ ] T048 Implement error boundary and error state UI in `src/app/error.tsx`
-- [ ] T049 Implement empty state handling for missing/incomplete data in section components
-- [ ] T050 [P] Add placeholder/default image handling for projects without thumbnails in `src/components/shared/ProjectCard.tsx`
-- [ ] T051 [P] Add text truncation with hover expansion for long descriptions in `src/components/shared/ProjectCard.tsx`
-- [ ] T052 Run quickstart.md validation end-to-end
-- [ ] T053 Run `npm run lint` and `npm run typecheck` with zero errors
+- [x] T045 [P] Add WCAG AA accessibility attributes (ARIA labels, roles, keyboard nav) across all components
+- [x] T046 [P] Verify responsive layout at 320px, 768px, and 1024px+ breakpoints across all sections
+- [x] T047 [P] Verify dark mode contrast ratio (4.5:1) for all text elements
+- [x] T048 Implement error boundary and error state UI in `src/app/error.tsx`
+- [x] T049 Implement empty state handling for missing/incomplete data in section components
+- [x] T050 [P] Add placeholder/default image handling for projects without thumbnails in `src/components/shared/ProjectCard.tsx`
+- [x] T051 [P] Add text truncation with hover expansion for long descriptions in `src/components/shared/ProjectCard.tsx`
+- [x] T052 Run quickstart.md validation end-to-end
+- [x] T053 Run `npm run lint` and `npm run typecheck` with zero errors
 
 ---
 

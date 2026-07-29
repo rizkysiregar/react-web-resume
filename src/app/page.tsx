@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { HeroSection, ProjectsSection } from '@/components/sections';
+import { HeroSection, ProjectsSection, ContactSection } from '@/components/sections';
 import { PrismaProfileRepository, PrismaProjectRepository } from '@/data/repositories';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -49,11 +49,7 @@ export default async function Home() {
         </section>
       )}
       <ProjectsSection projects={projects} />
-      <section id="contact" className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-foreground/60">Contact section placeholder</p>
-        </div>
-      </section>
+      <ContactSection socialLinks={profile?.socialLinks ?? []} />
     </main>
   );
 }

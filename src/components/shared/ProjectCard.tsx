@@ -25,10 +25,11 @@ export function ProjectCard({
   className,
 }: ProjectCardProps) {
   const truncatedDescription = truncateText(description, 150);
+  const isTruncated = description.length > 150;
 
   return (
     <article
-      className={`rounded-lg overflow-hidden bg-foreground/5 border border-foreground/10 hover:border-foreground/20 transition-colors ${className ?? ''}`}
+      className={`group relative rounded-lg overflow-hidden bg-foreground/5 border border-foreground/10 hover:border-foreground/20 transition-colors ${className ?? ''}`}
     >
       <div className="relative aspect-video w-full">
         {thumbnailUrl ? (
@@ -43,6 +44,8 @@ export function ProjectCard({
           <div
             data-testid="placeholder-image"
             className="w-full h-full bg-foreground/10 flex items-center justify-center"
+            role="img"
+            aria-label="No image available"
           >
             <span className="text-foreground/40 text-sm">No image</span>
           </div>
@@ -51,9 +54,19 @@ export function ProjectCard({
 
       <div className="p-4">
         <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
-        <p data-testid="project-description" className="text-foreground/70 text-sm mb-3 leading-relaxed">
+        <p
+          data-testid="project-description"
+          className="text-foreground/70 text-sm mb-3 leading-relaxed"
+          title={isTruncated ? description : undefined}
+        >
           {truncatedDescription}
         </p>
+
+        {isTruncated && (
+          <div className="hidden group-hover:block group-focus-within:block absolute left-0 right-0 bottom-0 bg-background/95 backdrop-blur border-t border-foreground/10 p-4 z-10 rounded-b-lg">
+            <p className="text-foreground/80 text-sm leading-relaxed">{description}</p>
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-1.5 mb-4">
           {techStack.map((tech) => (

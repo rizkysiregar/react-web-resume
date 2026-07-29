@@ -8,9 +8,9 @@ interface ProjectsSectionProps {
 
 export function ProjectsSection({ projects, className }: ProjectsSectionProps) {
   return (
-    <section id="projects" className={`py-16 px-4 ${className ?? ''}`}>
+    <section id="projects" aria-labelledby="projects-heading" className={`py-16 px-4 ${className ?? ''}`}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Projects</h2>
+        <h2 id="projects-heading" className="text-3xl font-bold text-foreground mb-8">Projects</h2>
 
         {projects.length === 0 ? (
           <p className="text-foreground/60 text-center py-8">No projects available yet.</p>
