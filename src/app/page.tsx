@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { HeroSection, ProjectsSection, ContactSection } from '@/components/sections';
 import { PrismaProfileRepository, PrismaProjectRepository } from '@/data/repositories';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata(): Promise<Metadata> {
   const profileRepository = new PrismaProfileRepository();
   const profile = await profileRepository.getProfile();

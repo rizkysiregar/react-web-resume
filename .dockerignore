@@ -11,3 +11,6 @@ coverage
 .specify
 .opencode
 specs
+k8s
+deploy.sh
+tests
