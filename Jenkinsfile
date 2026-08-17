@@ -12,6 +12,12 @@ pipeline {
             }
         }
 
+        stage('Generate Prisma Client') {
+            steps {
+                sh 'npm run db:generate'
+            }
+        }
+        
         stage('Lint') {
             steps {
                 sh 'npm run lint'
