@@ -85,6 +85,7 @@ pipeline {
                     def imageName = "rizkysiregar/react-web-resume:${imageTag}"
 
                     dir('gitops') {
+
                         git branch: 'main',
                             credentialsId: 'github-all-repo-pat',
                             url: 'https://github.com/rizkysiregar/homelabs-gitops.git'
@@ -95,20 +96,32 @@ pipeline {
 
                         sh 'git diff -- apps/portfolio/deployment.yaml'
 
-                        sh """
-                            git config user.name "Jenkins"
-                            git config user.email "jenkins@localhost"
+                        withCredentials([
+                            usernamePassword(
+                                credentialsId: 'github-all-repo-pat',
+                                usernameVariable: 'GIT_USERNAME',
+                                passwordVariable: 'GIT_PASSWORD'
+                            )
+                        ]) {
+                            sh '''
+                                git config user.name "Jenkins"
+                                git config user.email "jenkins@localhost"
 
-                            git add apps/portfolio/deployment.yaml
+                                git add apps/portfolio/deployment.yaml
 
-                            git commit -m "deploy: portfolio ${imageTag}" || echo "No changes to commit"
+                                if ! git diff --cached --quiet; then
+                                    git commit -m "deploy: portfolio ${GIT_COMMIT}"
 
-                            git push origin main
-                        """
+                                    git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/rizkysiregar/homelabs-gitops.git HEAD:main
+                                else
+                                    echo "No GitOps changes to commit"
+                                fi
+                            '''
+                        }
                     }
                 }
             }
-        }       
+        }
 
         
     }
