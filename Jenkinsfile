@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:22'
+            image 'node:20'
         }
     }
 
@@ -17,7 +17,7 @@ pipeline {
                 sh 'npm run db:generate'
             }
         }
-        
+
         stage('Lint') {
             steps {
                 sh 'npm run lint'
