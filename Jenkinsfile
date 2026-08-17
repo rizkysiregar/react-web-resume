@@ -52,5 +52,32 @@ pipeline {
                 }
             }
         }
+
+        stage('Docker Push') {
+            steps {
+                script {
+                    def imageTag = env.GIT_COMMIT.take(8)
+                    def imageName = "rizkysiregar/react-web-resume:${imageTag}"
+
+                    withCredentials([
+                        usernamePassword(
+                            credentialsId: 'dockerhub',
+                            usernameVariable: 'DOCKER_USERNAME',
+                            passwordVariable: 'DOCKER_PASSWORD'
+                        )
+                    ]) {
+                        sh """
+                            echo "\$DOCKER_PASSWORD" | docker login \
+                                -u "\$DOCKER_USERNAME" \
+                                --password-stdin
+
+                            docker push ${imageName}
+                        """
+                    }
+                }
+            }
+        }
+
+        
     }
 }
