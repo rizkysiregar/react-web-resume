@@ -41,5 +41,16 @@ pipeline {
                 sh 'npm run build'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                script {
+                    def imageTag = env.GIT_COMMIT.take(8)
+                    def imageName = "rizkysiregar/react-web-resume:${imageTag}"
+
+                    sh "docker build -t ${imageName} ."
+                }
+            }
+        }
     }
 }
