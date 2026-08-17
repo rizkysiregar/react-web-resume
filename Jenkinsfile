@@ -78,6 +78,38 @@ pipeline {
             }
         }
 
+        stage('Update GitOps') {
+            steps {
+                script {
+                    def imageTag = env.GIT_COMMIT.take(8)
+                    def imageName = "rizkysiregar/react-web-resume:${imageTag}"
+
+                    dir('gitops') {
+                        git branch: 'main',
+                            credentialsId: 'github-all-repo-pat',
+                            url: 'https://github.com/rizkysiregar/homelabs-gitops.git'
+
+                        sh """
+                            sed -i 's|image: rizkysiregar/react-web-resume:.*|image: ${imageName}|' apps/portfolio/deployment.yaml
+                        """
+
+                        sh 'git diff -- apps/portfolio/deployment.yaml'
+
+                        sh """
+                            git config user.name "Jenkins"
+                            git config user.email "jenkins@localhost"
+
+                            git add apps/portfolio/deployment.yaml
+
+                            git commit -m "deploy: portfolio ${imageTag}" || echo "No changes to commit"
+
+                            git push origin main
+                        """
+                    }
+                }
+            }
+        }       
+
         
     }
 }
